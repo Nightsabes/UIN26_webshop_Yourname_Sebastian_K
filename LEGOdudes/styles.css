@@ -57,6 +57,7 @@ h3{
     max-width: var(--maxwidth);
     background-color: var(--white);
     margin: 0 auto;
+    position: relative;
 
 }
 
@@ -110,12 +111,14 @@ nav{
 }
 
 main{
+    #product-list{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding-left: 1rem;
     padding-right: 1rem;
     gap: 1rem;
+    }
 
     h2{
         width: 100%;
@@ -160,4 +163,27 @@ main{
         width: 100%;
     }
     
+}
+
+/*Handelvogn*/
+
+#cart{
+    width: 550px;
+    background: var(--black);
+    border-left: 0.5rem solid var(--green);
+    border-bottom: 0.5rem solid var(--green);
+    padding: 1rem;
+    position: absolute;
+    top: 74px;
+    right: 0px;
+
+    &.hidden {
+        visibility: hidden;
+    }
+
+
+    table{
+        width: 100%;
+        color: var(--white);
+    }
 }

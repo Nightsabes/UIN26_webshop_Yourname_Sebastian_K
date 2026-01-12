@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="shopscript.js" defer></script>
+    <script src="legodudes.js"></script>
     <title>LEGOdudes also I am so high right now omfg</title>
 </head>
 <body>
@@ -16,7 +17,7 @@
                 </a>
             </h1>
             <button id="cart-button">
-                <div>69</div>
+                <div id="cart-quantity">0</div>
                 <img src="website_images/legocart.svg" alt="legocart">
             </button>
         </header>
@@ -30,54 +31,18 @@
         </nav>
         <main>
             <h2>NINJAGO</h2>
-            <article class="product-card">
-                <img src="website_images/PROD_dragon_zane.webp" alt="PRODNAVN">
-                <a href="#">Ninjago</a>
-                <h3>DRAGON ZANE</h3>
-                <p>kr.89,-</p>
-                <button>Legg i hanglekruv</button>
-            </article>
-            <article class="product-card">
-                <img src="website_images/PROD_dragon_zane.webp" alt="PRODNAVN">
-                <a href="#">Ninjago</a>
-                <h3>DRAGON ZANE</h3>
-                <p>kr.89,-</p>
-                <button>Legg i hanglekruv</button>
-            </article>
-            <article class="product-card">
-                <img src="website_images/PROD_dragon_zane.webp" alt="PRODNAVN">
-                <a href="#">Ninjago</a>
-                <h3>DRAGON ZANE</h3>
-                <p>kr.89,-</p>
-                <button>Legg i hanglekruv</button>
-            </article>
-            <article class="product-card">
-                <img src="website_images/PROD_dragon_zane.webp" alt="PRODNAVN">
-                <a href="#">Ninjago</a>
-                <h3>DRAGON ZANE</h3>
-                <p>kr.89,-</p>
-                <button>Legg i hanglekruv</button>
-            </article>
-            <article class="product-card">
-                <img src="website_images/PROD_dragon_zane.webp" alt="PRODNAVN">
-                <a href="#">Ninjago</a>
-                <h3>DRAGON ZANE</h3>
-                <p>kr.89,-</p>
-                <button>Legg i hanglekruv</button>
-            </article><article class="product-card">
-                <img src="website_images/PROD_dragon_zane.webp" alt="PRODNAVN">
-                <a href="#">Ninjago</a>
-                <h3>DRAGON ZANE</h3>
-                <p>kr.89,-</p>
-                <button>Legg i hanglekruv</button>
-            </article><article class="product-card">
-                <img src="website_images/PROD_dragon_zane.webp" alt="PRODNAVN">
-                <a href="#">Ninjago</a>
-                <h3>DRAGON ZANE</h3>
-                <p>kr.89,-</p>
-                <button>Legg i hanglekruv</button>
-            </article>
+            <div id="product-list"></div>
         </main>
+        <section id="cart" class="hidden">
+            <table>
+                <tr>
+                    <td class="title">PRODUKTTITTIES</td>
+                    <td class="pris">RICE</td>
+                    <td class="quantity">1</td>
+                    <td class="delete"><button>X</button></td>
+                </tr>
+            </table>
+        </section>
     </div>
 </body>
 </html>

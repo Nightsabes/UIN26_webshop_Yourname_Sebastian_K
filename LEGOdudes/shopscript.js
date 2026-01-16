@@ -44,12 +44,29 @@ function fetchProducts() {
                     <td class="title">${product.title}</td>
                     <td class="pris">${product.price}</td>
                     <td class="quantity">${ci.quantity}</td>
-                    <td class="delete"><button>X</button></td>
+                    <td class="delete"><button onClick="deleteFromCart(${product.prodid})">X</button></td>
                 </tr>`
+        //Summere totalpris
+        totalPrice += Number(product.price) * Number(ci.quantity)
     })
+
+    if(cart.length === 0){
+        cartHTML += "<tr><td>Ingen deez i nuts</td></tr>"
+    }
+
     document.getElementById("cart-items").innerHTML = cartHTML
+    document.getElementById("total-price").innerHTML = totalPrice
+    document.getElementById("cart-quantity").innerHTML = cart.length
  }
 
+ //slette dritt
+function deleteFromCart(prodid){
+    let deleteIndex = cart.indexOf(prodid)
+    if(deleteIndex > -1){
+        cart.splice(deleteIndex, 1)
+    }
+    showCart()
+}
  
  //Leg til i handle avang
 function addToCart(prodid) {
